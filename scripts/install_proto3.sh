@@ -32,4 +32,4 @@ cmake -G Ninja \
   -DCMAKE_INSTALL_PREFIX=${HOME}/Software/protobuf3.4.1/ \
   ../cmake
 ninja
-sudo ninja install
+ninja install
