@@ -29,6 +29,7 @@ cmake -G Ninja \
   -DCMAKE_POSITION_INDEPENDENT_CODE=ON \
   -DCMAKE_BUILD_TYPE=Release \
   -Dprotobuf_BUILD_TESTS=OFF \
+  -DCMAKE_INSTALL_PREFIX=${HOME}/Software/protobuf3.4.1/ \
   ../cmake
 ninja
 sudo ninja install

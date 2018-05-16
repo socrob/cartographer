@@ -32,7 +32,11 @@ find_package(Boost REQUIRED COMPONENTS iostreams)
 find_package(Ceres REQUIRED COMPONENTS SuiteSparse)
 find_package(Eigen3 REQUIRED)
 find_package(LuaGoogle REQUIRED)
-find_package(Protobuf 3.0.0 REQUIRED)
+
+set(PROTOBUF_INSTALL_DIR "$ENV{HOME}/Software/protobuf3.4.1")
+set(PROTOBUF_LIBRARY "${PROTOBUF_INSTALL_DIR}/lib/libprotobuf.a")
+set(PROTOBUF_INCLUDE_DIR "${PROTOBUF_INSTALL_DIR}/include")
+set(PROTOBUF_PROTOC_EXECUTABLE "${PROTOBUF_INSTALL_DIR}/bin/protoc")
 
 if (${BUILD_GRPC})
   find_package(async_grpc REQUIRED)
